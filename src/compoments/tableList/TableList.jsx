@@ -10,28 +10,28 @@ class TableList extends Component  {
                 key: 'title',
                 label: '项目名称',
                 style: {
-                    width: '270px'
+                    width: '5.4rem'
                 }
             },
             {
                 key: 'bid_company.name',
                 label: '中标单位',
                 style: {
-                    width: '130px'
+                    width: '2.6rem'
                 }
             },
             {
                 key: 'bid_money',
                 label: '中标金额（万元）',
                 style: {
-                    width: '109px'
+                    width: '2.18rem'
                 }
             },
             {
                 key: 'publish_time',
                 label: '发布时间',
                 style: {
-                    width: '90px'
+                    width: '1.8rem'
                 }
             },
         ],

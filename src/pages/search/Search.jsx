@@ -567,7 +567,7 @@ class Search extends Component {
                             }
 
                             <span className="screen"
-                                onClick={this.showSieve}
+                                onClick={()=>this.showSieve()}
                             >筛选</span>
 
                             {
@@ -579,7 +579,7 @@ class Search extends Component {
                                         <img src={require('../../assets/images/delete_icon.png')} alt=""/>    
                                     </span>
                                     <span className="query"
-                                          onClick={this.toSearch}
+                                          onClick={()=>this.toSearch()}
                                     >
                                         <img src={require('../../assets/images/search_icon.png')} alt=""/>
                                     </span>
@@ -592,7 +592,7 @@ class Search extends Component {
                 {
                     show_sieve?
                     <Sieve reset={this.searchReset}
-                           toSearch = {this.toSearch}
+                           toSearch = {()=>this.toSearch()}
                            setSieve = {this.setSieve}
                            sieveState = {sieve}
                            keyword={search_word}
