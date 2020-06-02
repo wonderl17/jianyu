@@ -1,0 +1,104 @@
+@mixin flex{
+  display: flex;
+  display: -moz-box;  /* Firefox */
+  display: -ms-flexbox;    /* IE10 */
+  display: -webkit-box;    /* Safari */
+  display: -webkit-flex;    /* Chrome, WebKit */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@mixin noSelect{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ant-message{
+  z-index: 9999999999999 !important;
+}
+.btn_unclickable{
+  background: rgb(200,200,200) !important;
+  box-shadow: none !important;
+  cursor: auto !important;
+}
+.normal_text_hover{
+  display: inline-block;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+  font-size:24px;
+  font-family:AlibabaPuHuiTiR;
+  color:rgba(12,134,254,1);
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  &:hover{
+    border-bottom: 1px solid rgba(12,134,254,1);
+  }
+}
+.normal_hover{
+  cursor: pointer;
+  color:rgba(12,134,254,1);
+  &:hover{
+    transition: all .25s;
+    color:rgba(12,134,254,1);
+  }
+}
+.normal_button{
+  width:580px;
+  height:70px;
+  cursor: pointer;
+  background:rgba(12,134,254,1);
+  box-shadow:0px 10px 30px 0px rgba(0,105,255,0.4);
+  border-radius:8px;
+  font-size:28px;
+  font-family:AlibabaPuHuiTiR;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 70px;
+  &:active{
+    transition: all .2s;
+    background: rgba(0,111,237,1);
+    //box-shadow: 3px 6px 10px 0px rgba(0,0,0,0.3);
+  }
+}
+.normal_input{
+  width:100%;
+  height:70px;
+  box-sizing: border-box;
+  background:rgba(255,255,255,1);
+  border-radius:8px;
+  border:1px solid rgba(171,171,171,1);
+  margin-bottom: 30px;
+  font-size:28px;
+  font-family:AlibabaPuHuiTiR;
+  padding-left: 19px;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1828642 */
+  src: url('//at.alicdn.com/t/font_1828642_im28ut7qa2.eot');
+  src: url('//at.alicdn.com/t/font_1828642_im28ut7qa2.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1828642_im28ut7qa2.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1828642_im28ut7qa2.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1828642_im28ut7qa2.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1828642_im28ut7qa2.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+@mixin bgImg($w:0,$h:0,$url:'',$size:contain) {
+  display: inline-block;
+  width: $w;
+  height: $h;
+  background: url($url) no-repeat center;
+  background-size: $size;
+}

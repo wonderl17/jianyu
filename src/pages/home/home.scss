@@ -1,0 +1,155 @@
+@import "../../assets/css/basic.scss";
+
+
+.home{
+    min-height: 100%;
+    background: #F4F4F9;
+    .top{
+        box-sizing: border-box;
+        width: 100%;
+        height: 5.06rem;
+        padding-top: .99rem;
+        background: linear-gradient(#31cbe0, white);
+        .home_search{
+            @include flex();
+            justify-content: space-between;
+            height: .96rem;
+            margin: 0 .2rem;
+            padding: 0 .2rem 0 .24rem;
+            background: #fff;
+            border-radius: 0.06rem;
+            .home_search_left {
+                @include flex();
+                width: 100%;
+                &::before{
+                    content: '';
+                    @include bgImg(.58rem,.58rem,'../../assets/images/home_search_icon.png')
+                }
+                span{
+                    font-size: .32rem;
+                    color: #888888;
+                    margin-left: .16rem;
+                }
+            }
+            .home_search_right{
+                position: relative;
+                padding-left: .2rem;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 1px;
+                    height: 100%;
+                    background: #E0E0E0;
+                    transform-origin: 0 0;
+                    transform: scaleX(0.5);
+                }
+                .img{
+                    @include bgImg(.5176rem,.5176rem,'../../assets/images/home_question_icon.png');
+                    display: block;
+                }
+            }
+        }
+        .home_banner{
+            margin-top: .36rem;
+            padding: 0 .3rem;
+            .lunbo{
+                width: 100%;
+                height: 2.75rem;
+                .swiper-slide {
+                    a{
+                        display: block;
+                        width: 100%;
+                        img{
+                            display: block;
+                            margin: 0 auto;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                    }
+                }
+                .custorm_dot{
+                    bottom : 0;
+                    .swiper-pagination-bullet{
+                        width: 0.08rem;
+                        height: 0.08rem;
+                        background: #fff;
+                        opacity: 0.6;
+                    }
+                    .swiper-pagination-bullet-active{
+                        background: #fff;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .home_tab{
+        padding: .5rem 0 .56rem;
+        border-bottom: 1px solid #F2F2F2;
+        background: #fff;
+        box-sizing: border-box;
+        .tab_container{
+            @include flex();
+            justify-content: space-between;
+            .tab_item{
+                flex: 1;
+                @include flex();
+                flex-direction: column;
+                text-align: center;
+                img{
+                    width: .96rem;
+                    height: .96rem;
+                    border: 0;
+                }
+                span{
+                    margin-top: .16rem;
+                    font-size: .26rem;
+                    color: #1D1D1D;
+                    line-height: .4rem;
+                }
+            }
+        }
+    }
+    .data_content{
+        background-color: #fff;
+        .data_nav{
+            padding: .32rem .3rem 0.08rem;
+            font-size: .4rem;
+            color: #1D1D1D;
+            font-weight: bold;
+        }
+    }
+    
+    .tips{
+        .tips_text{
+            padding: .48rem 0 .24rem;
+            color: #686868;
+            font-size: .26rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .home_2,.home_3,.home_4{
+            display: none;
+        }
+        .tips_btn{
+            text-align: center;
+            width: 100%;
+            a{
+            margin-bottom: .48rem;
+
+                vertical-align: top;
+                display: inline-block;
+                padding: 0 .32rem;
+                height: .64rem;
+                line-height: .64rem;
+                background: #2CB7CA;
+                color: #fff !important;
+                font-size: .28rem;
+                border-radius: 0.06rem;
+            }
+        }
+    }
+}

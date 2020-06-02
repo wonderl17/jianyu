@@ -1,0 +1,139 @@
+@import "../../assets/css/basic.scss";
+.result{
+    .header{
+        // position: relative;
+        // width: 100%;
+        background-color: #fff;
+        .headline{
+            height: .8rem;
+            line-height: .8rem;
+            @include flex();
+            justify-content: space-between;
+            padding: 0 .28rem 0 .34rem;
+            color: #888;
+            font-size: .26rem;
+            z-index: 8;
+            position: relative;
+            background-color: #fff;
+            .options{
+                @include flex();
+                color: #2CB7CA;
+                .search_title{
+                    &::after{
+                        content: "\e604";
+                        font-size: .36rem;
+                        vertical-align: middle;
+                        margin-left: 1px;
+                    }
+                }
+                .show_list{
+                    margin-left: .74rem;
+                    &::after{
+                        content: "\e604";
+                        font-size: .36rem;
+                        vertical-align: middle;
+                        margin-left: 1px;
+                    }
+                }
+            }
+            .date_export{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: -0.66rem;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 0.44rem;
+                    background-color: #e0e0e0;
+
+                }
+                span{
+                    display: inline-block;
+                    background-color: #effafc;
+                    height: .52rem;
+                    line-height: .52rem;
+                    width:1.65rem;
+                    padding: 0 .05rem;
+                    border-radius: 0.25rem;
+                    text-align: center;
+                    color: #2CB7CA;
+                    &::before{
+                        content: "\e694";
+                        font-size: .3rem;
+                        vertical-align: top;
+                        margin-right: .08rem;
+                    }
+                }
+            }
+        }
+        .down_list{
+            position: relative;
+            z-index: 8;
+            border-top: 1px solid #eee;
+            width: 100%;
+            .list{
+                position: absolute;
+                font-size: .26rem;
+                color: #888;
+                padding: 0 .14rem;
+                height: 0;
+                width: 100%;
+                overflow: hidden;
+                z-index: 8;
+                background: #fff;
+                transition: height .2s;
+                .list_item{
+                    height: .9rem;
+                    line-height: .9rem;
+                    width: 100%;
+                    padding: 0 .2rem;
+                    &:last-child{
+                         border-top: 1px solid #eee;
+                    }
+                }
+                .list_item_active{
+                    color: #2CB7CA;
+                    @include flex();
+                    justify-content: space-between;
+                    &::after{
+                        content: '\e766';
+                        font-size: .28rem;
+                        margin: 0 .064rem;
+                    }
+                }
+            }
+            .down_list_active{
+                transition: height .2s;
+                height: 1.8rem;
+            }
+        }
+        
+        .mask{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 7;
+            opacity: 1;
+            background-color: rgba(0,0,0,0.6);
+        }
+    }
+    .result_content{
+        padding: 0 .1rem;
+    }
+    .cant_drop{
+        margin: .4rem 0;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .data_loading{
+        margin: .2rem auto;
+        line-height: 1.6;
+        text-align: center;
+    }
+}

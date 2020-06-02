@@ -1,0 +1,292 @@
+
+@import "../../assets/css/basic.scss";
+
+
+.sieve{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    .sieve_head{
+        @include flex();
+        width: 100%;
+        height: .8rem;
+        border-bottom: 1px solid #e0e0e0;
+        padding-left: .08rem;
+        .option{
+            position: relative;
+            text-align: center;
+            font-size: .28rem;
+            flex: 1;
+            color:#888;
+            padding-right: .2rem;
+            &::after{
+                content: '';
+                position: absolute;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border: .06rem solid ;
+                border-color: #888  transparent transparent transparent;
+                margin-left: .1rem;
+                transform: scale(1.5);
+                top: 50%;
+            }
+        }
+        .option_active{
+            color: #2cb7ca;
+            &::after{
+                border-color: transparent transparent #2cb7ca transparent;
+                top: 40%;
+                transform: translateY(-65%) scale(1.5);;
+            }
+        }
+    }
+    .content{
+        padding: 0 .3rem .9rem;
+        overflow-y: auto;
+        width: 100%;
+        ul{
+            li{
+                padding: .2rem 0 .2rem;
+                border-bottom: 1px solid #e0e0e0;
+                width: 100%;
+                font-size: 0;
+                &:last-child{
+                    border:  none;
+                }
+                .btn{
+                    display: inline-block;
+                    padding: 0 .24rem;
+                    background-color: #F4F4F9;
+                    color: #1d1d1d;
+                    font-size: .28rem;
+                    margin-right: .16rem;
+                    margin-bottom: .1rem;
+                    margin-top: .1rem;
+                    border-radius: .06rem;
+                    height: .7rem;
+                    line-height: .7rem;
+                    vertical-align: middle;
+                }
+                .btn_active{
+                    background-color: #24C0D7;
+                    color: #FFFFFF;
+                }
+            }
+            
+        }
+        
+    }
+    .industry{
+        .industry_item{
+            .items{
+                @include flex();
+                flex-wrap: wrap;
+            }
+            .class{
+                font-size: .3rem;
+                font-weight: bold;
+            }
+        }
+    }
+    .money{
+        .money_item{
+            font-size: 0;
+        .btn{
+          padding: 0 .45rem;
+        }
+        }
+        
+        .amount{
+            span{
+                font-size: .32rem;
+                color: #888888;
+                line-height: .8rem;
+            }
+            
+            .money_form{
+                @include flex();
+                justify-content: space-between;
+                width: 100%;
+                height: 1.2rem;
+                line-height: 1.2rem;
+                background-color: #f5f4fa;
+                padding: .2rem;
+                font-size: .32rem;
+                color: #cecece;
+                .input{
+                    width: 42%;
+                    height: .76rem;
+                    line-height: .76rem;
+                    @include flex();
+                    background-color: #fff;
+                    border-radius: .1rem;
+                    color:#000;
+                    border: 1px solid #ccc;
+                    input{
+                        vertical-align: middle;
+                        height: 100%;
+                        width: 1.88rem;
+                        padding: 8px 10px 8px 10px;
+                    }
+                }
+            }
+            .btn_active{
+                background-color: #24C0D7;
+                color: #fff;
+            }
+        }
+    }
+    .time{
+        .time_item{
+            font-size: .32rem;
+            .date_form{
+                @include flex();
+                justify-content: space-between;
+                width: 100%;
+                height: 1.2rem;
+                line-height: 1.2rem;
+                background-color: #f5f4fa;
+                padding: .2rem;
+                font-size: .32rem;
+                color: #cecece;
+                .date_picker{
+                    width: 2.73rem;
+                    height: .76rem;
+                    line-height: .76rem;
+                    background-color: #fff;
+                    border-radius: .1rem;
+                    color:#000;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                }
+              
+            }
+            .btn_active{
+                background-color: #24C0D7;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .area{
+        .area_item{
+            // padding: .3rem 0 .12rem .3rem;
+            @include flex();
+            .btn{
+                padding: 0 .3rem;
+                margin-left: .3rem;
+            }
+            .first_letter{
+                font-size: .28rem;
+                color: #3d3d3d;
+                vertical-align: middle;
+                line-height: 1;
+                flex: 1;
+            }
+            .province{
+                @include flex();
+                flex-wrap: wrap;
+                vertical-align: middle;
+                flex:25;
+                .btn{
+                    margin-left: .1rem;
+                }
+            }
+        }
+    }
+    .type{
+        .type_item{
+            
+            .btn{
+                padding: 0 .44rem;
+            }
+            .class{
+                padding: 0 .24rem;
+                font-size: .3rem;
+                font-weight: bold;
+            }
+            .special{
+                &::after{
+                    content: '\e71d';
+                    position: absolute;
+                    font-size: .46rem;
+                    color: #888888;
+                    font-weight: normal;
+                    margin-top: .18rem;
+                    color: #2cb7ca;
+                }
+               .mask{
+                   position: fixed;
+                   top: 0;
+                   left: 0;
+                   height: 100%;
+                   width: 100%;
+                   background-color: rgba(0,0,0,0.7);
+                   z-index: -100;
+                   opacity: 0;
+                   transition: all .4s linear;
+
+                   .tip{
+                        position: fixed;
+                        top:45%;
+                        left: 50%;
+                        width: 5.6rem;
+                        height: 4.16rem;
+                        background: #fff;
+                        transform: translate(-50%,-50%);
+                        border-radius: .08rem;
+
+                       .top{
+                        height: 3.16rem;
+                        width: 100%;
+                        padding: .76rem .4rem .48rem .4rem;
+                        font-size: .3rem;
+                        line-height: 1.6;
+                       }
+                       .bottom{
+                        text-align: center;
+                        border-top: 1px solid #E0E0E0;
+                        width: 100%;
+                        height: 1rem;
+                        line-height: 1rem;
+                        font-size: .36rem;
+                        color: #2cb7ca;
+                       }
+                   }
+               }
+               .on {
+                background-color: rgba(0,0,0,0.7);
+                z-index: 9999;
+                opacity: 1;
+                transition: all .4s linear;
+               }
+            }
+        }
+    }
+    .footer_btn{
+        @include flex();
+        border-top: 1px solid #ccc;
+        height: .9rem;
+        line-height: .9rem;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        font-size: .36rem;
+        z-index: 10;
+        text-align: center;
+        .reset{
+            flex:1;
+            background-color: #f0f9fa;
+            color: #2cb7ca;
+        }
+        .confirm{
+            flex:1;
+            background-color: #cccccc;
+            color: #ffffff;
+        }
+        .confirm_active{
+           background-color: #2cb7ca;   
+        }
+    }
+}

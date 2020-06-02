@@ -1,0 +1,49 @@
+.table_list{
+    position: relative;
+   .table{
+    width: 100%;
+    overflow: scroll;
+    padding: .1rem .3rem;
+   }
+    table{
+        width: 16rem;
+        margin-top: .4rem;
+        margin-bottom: 1.2rem;
+        tr{
+            color: #565f66;
+            height: 1rem;
+            td{
+                border: 1px solid #E0E0E0;
+                text-align: center;
+                vertical-align: middle;
+                padding: .1rem;
+                p{
+                    padding: .2rem .5rem;
+                }
+            }
+        }
+    }
+    .shade{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2.4rem;
+        z-index: 10;
+        background: linear-gradient(to bottom, rgba(255,255,255,0),rgba(255,255,255,0.8),rgba(255,255,255,1),rgba(255,255,255,1));
+        .btn{
+            position: absolute;
+            height: .7rem;
+            width: 100px;
+            left: 50%;
+            transform: translate(-50%);
+            bottom: 20px;
+            color: #2cb7ca;
+            border-radius: .1rem;
+            border: 1px solid #2cb7ca;
+            line-height: .7rem;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}

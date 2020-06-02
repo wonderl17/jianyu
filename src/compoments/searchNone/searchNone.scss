@@ -1,0 +1,22 @@
+.search_none{
+    .container{
+        text-align: center;
+        font-size: .32rem;
+        line-height: 1.6;
+        .img1{
+            width: 3.26rem;
+            height: auto;
+            margin-top: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .img2{
+            width: 4rem;
+            height: auto;
+            margin-top: .3rem;
+        }
+        .can_click{
+            color: #2cb7ca;
+            text-decoration: underline;
+        }
+    }
+}
