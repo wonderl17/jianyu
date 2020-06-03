@@ -21,7 +21,7 @@ class Search extends Component {
         data_flow:[],
         cursor:'',
         options:[],
-        placeholder:"示例：税务局 软件",
+        placeholder:"示例：华为",
         sieve:{
             min_money: '',    
             max_money: '',
@@ -250,6 +250,8 @@ class Search extends Component {
     setSieve = (obj) => {
         const  {sieve} = this.state
         if(obj){
+            console.log(obj);
+            
             Object.assign(sieve,obj) 
             this.setState({
                 sieve
@@ -272,11 +274,11 @@ class Search extends Component {
     keyDown = (e) => {
         const keyCode = e.keyCode
         let {history_cursor,search_history,show_history} = this.state
+        if(keyCode === 13){
+            e.preventDefault()
+            this.toSearch()
+        }
         if(show_history){
-            if(keyCode === 13){
-                e.preventDefault()
-                this.toSearch()
-            }
             if(keyCode >=37 && keyCode <= 40){
                 e.preventDefault()
                 if(keyCode === 40){

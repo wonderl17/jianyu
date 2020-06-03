@@ -256,10 +256,9 @@ class Sieve extends Component {
     dateChange = (type,val) => {
         if(val){
             this.setSieveState({
-                time_checked:'custom'
-            }, ()=>this.setSieveState({
-                [type]:val,
-            }))
+                time_checked:'custom',
+                [type]:val
+            })
         }
     }
     getNowStr = () => {

@@ -6,9 +6,11 @@ import Search from './pages/search/Search'
 import Export from './pages/export/Export'
 import SearchZb from './pages/searchZb/SearchZb'
 import SearchZb_1 from './pages/searchZb/SearchZb_1'
+import Advice from './pages/advice/Advice';
+
+
 import './App.scss';
 import './assets/css/reset.css'
-import Advice from './pages/advice/Advice';
 
 class App extends Component {
   componentDidMount(){
@@ -36,7 +38,7 @@ class App extends Component {
           window.document.head.appendChild(metaEl);
       }
       metaEl.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale);
-      let fsize = (document.documentElement.clientWidth) / (750 / _baseFontSize)
+      let fsize = (document.documentElement.clientWidth > 1125? 1125: document.documentElement.clientWidth) / (750 / _baseFontSize)
       document.documentElement.style.fontSize = fsize+'px';
   }
 
