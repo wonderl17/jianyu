@@ -21,8 +21,8 @@ module.exports = override(
   }),
   addPostcssPlugins([require('postcss-pxtorem')({
                                rootValue: 50,
-                               propList: ['*']
-                               // propList: ['*', '!border*', '!font-size*', '!letter-spacing'],
+                               propList: ['!border*']
+                              //  propList: ['*', '!border*', '!font-size*', '!letter-spacing'],
                                // propWhiteList: []
                             }),])
  

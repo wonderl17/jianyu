@@ -107,18 +107,15 @@ class Home extends Component {
                         <div className="swiper-container lunbo">
                             <div className="swiper-wrapper">
                                 <div className="swiper-slide">
-                                    <a href="/#">
-                                        <img src={require("../../assets/images/banner1.jpg")} alt=""/>
+                                    <a href="/#" className="img1">
                                     </a>
                                 </div>
                                 <div className="swiper-slide">
-                                    <a href="/#">
-                                        <img src={require("../../assets/images/banner2.jpg")} alt=""/>
+                                    <a href="/#" className="img2">
                                     </a>
                                 </div>
                                 <div className="swiper-slide">
-                                    <a href="/#">
-                                        <img src={require("../../assets/images/banner3.png")} alt=""/>
+                                    <a href="/#" className="img3">
                                     </a>
                                 </div>
                             </div>

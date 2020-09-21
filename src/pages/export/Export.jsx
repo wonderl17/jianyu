@@ -127,13 +127,15 @@ class Export extends Component  {
     }
     checkInput = (val,type) =>{
         if(type === 'phone'){
-            const reg = /^[1-9]+[3-9]+[0-9]{9}/
+            // const reg = /^[1-9]+[3-9]+[0-9]{9}/
+            const reg = /^(?:(?:\+|00)86)?1[3-9]\d{9}$/
             if(val.length !== 11)
                 return false
             return reg.test(val)? true:false
         }
         else if(type === 'email'){
-            const reg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/
+            // const reg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/
+            const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             return reg.test(val)? true:false
         }   
         else if(type === 'code'){

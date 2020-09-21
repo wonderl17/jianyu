@@ -39,6 +39,7 @@ class App extends Component {
       }
       metaEl.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale);
       let fsize = (document.documentElement.clientWidth > 1125? 1125: document.documentElement.clientWidth) / (750 / _baseFontSize)
+      
       document.documentElement.style.fontSize = fsize+'px';
   }
 
